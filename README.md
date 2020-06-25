@@ -18,12 +18,12 @@ This predicts that how much chances are there that the student will get admissio
 Download/clone this repository in your system. Open command line (anaconda prompt), go to the folder that contains all project files. Then run the command ```flask run```
 which will give you an address like ```localhost:5000``` copy that and paste it in the address bar of web browser. Project's interface will load on the web browser.
 
-![GUI_1](https://github.com/khairmuhammad/Data_Science_Project/blob/master/GUI_1.png)
+![GUI_1](https://github.com/khairmuhammad/Graduate_Admission_Prediction/blob/master/GUI_1.png)
 
 ## Entering Features for Prediction
 
-![GUI_2](https://github.com/khairmuhammad/Data_Science_Project/blob/master/GUI_2.png)
+![GUI_2](https://github.com/khairmuhammad/Graduate_Admission_Prediction/blob/master/GUI_2.png)
 
 ## Prediction
 
-![GUI_3](https://github.com/khairmuhammad/Data_Science_Project/blob/master/GUI_3.png)
+![GUI_3](https://github.com/khairmuhammad/Graduate_Admission_Prediction/blob/master/GUI_3.png)
