@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 490px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <form action="{{url_for('predict')}}" method="post">
+    <div class="row">
+      <marquee class="bottom-container"><h2>Graduate Admission Prediction using Lineaar Regression</h2></marquee>
+      <div class="vl">
+        <span class="vl-innertext"></span>
+      </div>
+
+      <div class="col">
+	  <p><b>In this project, I build a linear regression model to predict the chance of admission into a particular university based on studetent's profile.</p></b>
+	  <h3>Instructions for Input Features</h3>
+      <ul>
+			<li>GRE Score (out of 340)</li>
+			<li>TOEFL Score (out of 120)</li>
+			<li>University Rating (out of 5)</li>
+			<li>Statment of Purpose {SOP} (out of 5)</li>
+			<li>Letter of Recommendation {LOP} Strength (out of 5)</li>
+			<li>Undergraduate CGPA (out of 10)</li>
+			<li>Research Experience (Either 0 or 1)</li>
+	   
+	  </ul>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+        </div>
+
+			<input type="text" name="GRE Score" placeholder="GRE Score" required="required"/>
+			<input type="text" name="TOEFL Score" placeholder="TOEFL Score" required="required"/>
+			<input type="text" name="University Rating" placeholder="University Rating" required="required"/>
+			<input type="text" name="SOP" placeholder="SOP" required="required"/>
+			<input type="text" name="LOR" placeholder="LOR" required="required"/>
+			<input type="text" name="CGPA" placeholder="CGPA" required="required"/>
+			<input type="text" name="Research" placeholder="Research " required="required"/>
+			
+			<input type="submit" value="Predict"></input>
+			
+			<h4 style="text-align: center;">{{prediction_text}}</h4>
+      </div>
+      
+    </div>
+  </form>
+  
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <marquee><h3>Model Developed and Deployed by: Khair Muhammad</h3></marquee>
+  </div>
+</div>
+
+</body>
+</html>
