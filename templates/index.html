@@ -159,13 +159,13 @@ input[type=submit]:hover {
         <div class="hide-md-lg">
         </div>
 
-			<input type="text" name="GRE Score" placeholder="GRE Score" required="required"/>
-			<input type="text" name="TOEFL Score" placeholder="TOEFL Score" required="required"/>
-			<input type="text" name="University Rating" placeholder="University Rating" required="required"/>
-			<input type="text" name="SOP" placeholder="SOP" required="required" onkeypress="return check(event,value)"/>
-			<input type="text" name="LOR" placeholder="LOR" required="required" onkeypress="return check(event,value)"/>
-			<input type="text" name="CGPA" placeholder="CGPA" required="required" onkeypress="return check(event,value)"/>
-			<input type="text" name="Research" placeholder="Research" required="required"/>
+			<input type="number" name="GRE Score" placeholder="GRE Score" required="required" min="0" max="340"/>
+			<input type="number" name="TOEFL Score" placeholder="TOEFL Score" required="required" min="0" max="120"/>
+			<input type="number" name="University Rating" placeholder="University Rating" required="required" min="1" max="5"/>
+			<input type="number" name="SOP" placeholder="SOP" required="required" onkeypress="return check(event,value)" step="0.1" min="1" max="5"/>
+			<input type="number" name="LOR" placeholder="LOR" required="required" onkeypress="return check(event,value)" step="0.1" min="1" max="5"/>
+			<input type="number" name="CGPA" placeholder="CGPA" required="required" onkeypress="return check(event,value)" step="0.01" min="1" max="10"/>
+			<input type="number" name="Research" placeholder="Research" required="required" min="0" max="1"/>
 			
 			<input type="submit" value="Predict"></input>
 			
