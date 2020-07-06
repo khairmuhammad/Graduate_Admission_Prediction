@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <SCRIPT language=Javascript>
+    <!--
+    function check(e, value) {
+      //Check Charater
+      var unicode = e.charCode ? e.charCode : e.keyCode;
+      if (value.indexOf(".") != -1)
+        if (unicode == 46) return false;
+      if (unicode != 8)
+        if ((unicode < 48 || unicode > 57) && unicode != 46) return false;
+    }
+    //-->
+  </SCRIPT>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -123,7 +135,7 @@ input[type=submit]:hover {
 <div class="container">
   <form action="{{url_for('predict')}}" method="post">
     <div class="row">
-      <marquee class="bottom-container"><h2>Graduate Admission Prediction using Lineaar Regression</h2></marquee>
+      <marquee class="bottom-container"><h2>Graduate Admission Prediction using Linear Regression</h2></marquee>
       <div class="vl">
         <span class="vl-innertext"></span>
       </div>
@@ -147,13 +159,13 @@ input[type=submit]:hover {
         <div class="hide-md-lg">
         </div>
 
-			<input type="number" name="GRE Score" placeholder="GRE Score" required="required" min="0" max="340"/>
-			<input type="number" name="TOEFL Score" placeholder="TOEFL Score" required="required" min="0" max="120"/>
-			<input type="number" name="University Rating" placeholder="University Rating" required="required" min="1" max="5"/>
-			<input type="number" name="SOP" placeholder="SOP" required="required" min="1" max="5"/>
-			<input type="number" name="LOR" placeholder="LOR" required="required" min="1" max="5"/>
-			<input type="number" name="CGPA" placeholder="CGPA" required="required" min="0" max="10"/>
-			<input type="number" name="Research" placeholder="Research " required="required" min="0" max="1"/>
+			<input type="text" name="GRE Score" placeholder="GRE Score" required="required"/>
+			<input type="text" name="TOEFL Score" placeholder="TOEFL Score" required="required"/>
+			<input type="text" name="University Rating" placeholder="University Rating" required="required"/>
+			<input type="text" name="SOP" placeholder="SOP" required="required" onkeypress="return check(event,value)"/>
+			<input type="text" name="LOR" placeholder="LOR" required="required" onkeypress="return check(event,value)"/>
+			<input type="text" name="CGPA" placeholder="CGPA" required="required" onkeypress="return check(event,value)"/>
+			<input type="text" name="Research" placeholder="Research" required="required"/>
 			
 			<input type="submit" value="Predict"></input>
 			
