@@ -9,14 +9,14 @@ decision tree regressor. In the end I deployed Linear Regression model due to la
 are working fine.
 
 ## Dependencies
-  tensorflow 	   	```pip install tensorflow```
-  scikit-learn     	```pip install -U scikit-learn```
-  flask		   	```pip install flask```
-  pickle	   	```pip install pickle``` 	
-  matplotlib.pyplot	```pip install matplotlib```
-  seaborn		```pip install seaborn```
-  numpy			```pip install numpy```
-  pandas		```pip install pandas```
+* tensorflow 	   	```pip install tensorflow```
+* scikit-learn     	```pip install -U scikit-learn```
+* flask		   	```pip install flask```
+* pickle	   	```pip install pickle``` 	
+* matplotlib.pyplot	```pip install matplotlib```
+* seaborn		```pip install seaborn```
+* numpy			```pip install numpy```
+* pandas		```pip install pandas```
 
 
 ## To Run this Project
@@ -27,7 +27,7 @@ which will give you an address like ```localhost:5000``` or ```localhost:8050```
 Project's interface will load on the web browser.
 
 Furthermore, I have deployed this project as web app on heroku. To visit that web app copy and paste this link in the address bar of
-web browser. Link: [Heroku Web App] (https://graduate-admission-prediction0.herokuapp.com)
+web browser. Link: [Heroku Web App](https://graduate-admission-prediction0.herokuapp.com)
  
 ![GUI_1](https://github.com/khairmuhammad/Graduate_Admission_Prediction/blob/master/templates/GUI_1.png)
 
