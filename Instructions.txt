@@ -28,4 +28,6 @@ Project's interface will load on the web browser.
 
 Furthermore, I have deployed this project as web app on heroku. To visit that web app copy and paste this link in the address bar of
 web browser. Link: "https://graduate-admission-prediction0.herokuapp.com/"
+
+Thanks
  
